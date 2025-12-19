@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { StoryInput, GeneratedStory } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'AIzaSyAZwlkGGF1MXEQgJ4nOsZwF8tRqXkarhBg' });
+const ai = new GoogleGenAI({ apiKey: 'AIzaSyAZwlkGGF1MXEQgJ4nOsZwF8tRqXkarhBg' });
 
 export const generateStory = async (input: StoryInput): Promise<GeneratedStory> => {
   const textModel = 'gemini-2.5-flash-preview';
