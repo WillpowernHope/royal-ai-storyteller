@@ -2,7 +2,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { StoryInput, GeneratedStory } from "../types";
 
 // Free tier Gemini model use karne ke liye
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: 'AIzaSyARNyC9AY6CfM8nJsZ_rfxk8xCbdTjHcA0' });
 
 export const generateStory = async (
   input: StoryInput
