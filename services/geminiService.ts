@@ -1,13 +1,14 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { StoryInput, GeneratedStory } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: 'AIzaSyARNyC9AY6CfM8nJsZ_rfxk8xCbdTjHcA0' });
+// Free tier Gemini model use karne ke liye
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 export const generateStory = async (
   input: StoryInput
 ): Promise<GeneratedStory> => {
 
-  const textModel = 'gemini-3-flash-preview';
+  const textModel = 'gemini-2.5-flash-lite'; // Free model
 
   const textPrompt = `Write a short, magical storybook tale (approx 300 words).
 Protagonist: ${input.protagonist}
