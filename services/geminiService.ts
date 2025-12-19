@@ -5,7 +5,7 @@ import { StoryInput, GeneratedStory } from "../types";
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 export const generateStory = async (input: StoryInput): Promise<GeneratedStory> => {
-  const textModel = 'gemini-3-flash-preview';
+  const textModel = 'gemini-2.5-flash-preview';
   const imageModel = 'gemini-1.5-flash-image';
 
   // 1. Generate Story Text
